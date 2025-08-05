@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ângelo Amancio | Massoterapeuta Profissional</title>
+     <link rel="icon" href="imagens/logo.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         html {
             scroll-behavior: smooth;
         }
+
         body {
             font-family: 'Poppins', sans-serif;
         }
+
         .hero-gradient {
-            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%), 
-                        url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%),
+                url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
         }
+
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+
         .nav-link {
             position: relative;
         }
+
         .nav-link:after {
             content: '';
             position: absolute;
@@ -37,33 +45,43 @@
             background-color: #28AA86;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover:after {
             width: 100%;
         }
+
         .mobile-menu {
             transition: all 0.3s ease;
         }
+
         .testimonial-card {
             transition: all 0.3s ease;
         }
+
         .testimonial-card:hover {
             transform: translateY(-5px);
         }
+
         .bg-primary {
             background-color: #28AA86;
         }
+
         .text-primary {
             color: #28AA86;
         }
+
         .bg-secondary {
             background-color: #482619;
         }
+
         .text-secondary {
             color: #482619;
         }
+
         .hover\:bg-primary:hover {
             background-color: #1f8a6d;
         }
+
         .hover\:text-primary:hover {
             color: #1f8a6d;
         }
@@ -81,28 +99,32 @@
                     </div>
                     <h1 class="text-xl font-bold text-gray-800">Ângelo Amancio</h1>
                 </div>
-                
+
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link text-gray-600 hover:text-primary">Início</a>
                     <a href="#servicos" class="nav-link text-gray-600 hover:text-primary">Serviços</a>
                     <a href="#sobre" class="nav-link text-gray-600 hover:text-primary">Sobre</a>
                     <a href="#beneficios" class="nav-link text-gray-600 hover:text-primary">Benefícios</a>
-                    <a href="#contato" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary transition duration-300 transform hover:scale-105">
+                    <a href="#contato"
+                        class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary transition duration-300 transform hover:scale-105">
                         Contato
                     </a>
                 </nav>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
-            
+
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mobile-menu hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-2 px-4">
+            <div id="mobile-menu"
+                class="mobile-menu hidden md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-2 px-4">
                 <a href="#home" class="block py-2 text-gray-600 hover:text-primary">Início</a>
                 <a href="#servicos" class="block py-2 text-gray-600 hover:text-primary">Serviços</a>
                 <a href="#sobre" class="block py-2 text-gray-600 hover:text-primary">Sobre</a>
@@ -113,17 +135,23 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-24 hero-gradient bg-gray-800">
-        <div class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Bem-estar através da <span class="text-primary">massoterapia</span></h1>
-            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Alívio de dores, redução do estresse e renovação energética com técnicas profissionais personalizadas.</p>
+    <section id="home" class="pt-24 bg-gray-800 relative overflow-hidden">
+        <!-- Imagem personalizada -->
+        <img src="imagens/principal_fundo.png" alt="Massoterapia"
+            class="absolute inset-0 w-full h-full object-cover opacity-30">
+
+        <div class="container mx-auto px-6 py-24 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">Bem-estar através da <span
+                    class="text-primary">massoterapia</span></h1>
+            <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">Alívio de dores, redução do estresse e renovação
+                energética com técnicas profissionais personalizadas.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" 
-                   class="bg-primary hover:bg-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão"
+                    class="bg-primary hover:bg-primary text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
                 </a>
-                <a href="tel:+5511999999999" 
-                   class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <a href="tel:+554791278965"
+                    class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <i class="fas fa-phone"></i> Ligar Agora
                 </a>
             </div>
@@ -136,136 +164,114 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Serviços</h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Oferecemos diversas técnicas de massoterapia para atender suas necessidades específicas.</p>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Oferecemos diversas técnicas de massoterapia para
+                    atender suas necessidades específicas.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Massagem Relaxante -->
+                <!-- Diversos tipos de massagens -->
                 <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/relaxante.png" alt="Massagem Relaxante" class="w-full h-48 object-cover">
+                    <img src="imagens/massagemz.JPG" alt="Massagem Relaxante" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Massagem Relaxante</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Diversas técnicas de massagem</h3>
                         <p class="text-gray-600 mb-4">Alívio de tensões e relaxamento profundo com técnicas suaves.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 180</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20massagem%20relaxante"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Massagem Terapêutica -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/relaxante.png" alt="Massagem Terapêutica" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Massagem Terapêutica</h3>
-                        <p class="text-gray-600 mb-4">Tratamento de dores crônicas e lesões musculares.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-bold text-lg">R$ 180</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
-                        </div>
-                    </div>
-                </div>
+
 
                 <!-- Ventosaterapia -->
                 <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/ventosaterapia.jpg" alt="Ventosaterapia" class="w-full h-48 object-cover">
+                    <img src="imagens/ventosaterapia2.jpg" alt="Ventosaterapia" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Ventosaterapia</h3>
                         <p class="text-gray-600 mb-4">Melhora circulação e alivia dores musculares.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 150</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20ventosaterapia"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Liberação Miofascial -->
                 <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/relaxante.png" alt="Liberação Miofascial" class="w-full h-48 object-cover">
+                    <img src="imagens/facial2.JPG" alt="Liberação Miofascial" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Liberação Miofascial</h3>
-                        <p class="text-gray-600 mb-4">Liberação de tensões na fáscia muscular.</p>
+                        <p class="text-gray-600 mb-4">Liberação de tensões na fáscia muscular. Instrumental e Manual
+                        </p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 180</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20liberação%20miofascial"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Pedras Quentes -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border-2 border-primary">
-                    <img src="imagens/relaxante.png" alt="Pedras Quentes" class="w-full h-48 object-cover">
+                <div
+                    class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border-2 border-primary">
+                    <img src="imagens/pedras.JPG" alt="Pedras Quentes" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pedras Quentes + Relaxante</h3>
-                        <p class="text-gray-600 mb-4">Combinação de calor vulcânico e massagem.</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pedras Vulcânicas + Massagem</h3>
+                        <p class="text-gray-600 mb-4">Combinação pedras vulcânicas com massagem.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 180</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20pedras%20quentes"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Massagem Sensitive -->
                 <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/relaxante.png" alt="Massagem Sensitive" class="w-full h-48 object-cover">
+                    <img src="imagens/sensitiva.jpg" alt="Massagem Sensitive" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Massagem Sensitive</h3>
                         <p class="text-gray-600 mb-4">Toques sutis para despertar sensações.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 250</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Botão para ver mais serviços -->
-            <div class="text-center mt-10">
-                <button id="show-more-services" class="text-primary font-medium hover:text-primary transition">
-                    Ver todos os serviços <i class="fas fa-chevron-down ml-1"></i>
-                </button>
-            </div>
-            
-            <!-- Serviços adicionais (inicialmente ocultos) -->
-            <div id="more-services" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <!-- Massagem Nuru -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border-2 border-primary">
-                    <img src="imagens/relaxante.png" alt="Massagem Nuru" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Massagem Nuru</h3>
-                        <p class="text-gray-600 mb-4">Técnica japonesa com óleo de coco.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-bold text-lg">R$ 250</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Massagem Tântrica -->
-                <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300 border-2 border-primary">
-                    <img src="imagens/relaxante.png" alt="Massagem Tântrica" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Massagem Tântrica</h3>
-                        <p class="text-gray-600 mb-4">Conexão entre corpo e energia.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-primary font-bold text-lg">R$ 250</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20massagem%20sensitive"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Banheira de Hidromassagem -->
                 <div class="service-card bg-white rounded-xl overflow-hidden shadow-lg transition duration-300">
-                    <img src="imagens/relaxante.png" alt="Banheira de Hidromassagem" class="w-full h-48 object-cover">
+                    <img src="imagens/banheira.JPG" alt="Banheira de Hidromassagem" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Banheira de Hidromassagem</h3>
                         <p class="text-gray-600 mb-4">Relaxamento em água aquecida (30min).</p>
                         <div class="flex justify-between items-center">
                             <span class="text-primary font-bold text-lg">R$ 80</span>
-                            <a href="#contato" class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
+                            <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão%20de%20hidromassagem"
+                                class="text-sm bg-primary text-white px-4 py-2 rounded hover:bg-primary transition transform hover:scale-105">Agendar</a>
                         </div>
                     </div>
                 </div>
+
+
+            </div>
+
+            <!-- Botão para ver mais serviços -->
+            <div class="text-center mt-10">
+                <button id="show-more-services" class="text-primary font-medium hover:text-primary transition">
+                    Ver todos os serviços <i class="fas fa-chevron-down ml-1"></i>
+                </button>
+            </div>
+
+            <!-- Serviços adicionais (inicialmente ocultos) -->
+            <div id="more-services" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- Massagem Nuru -->
+
+
             </div>
         </div>
     </section>
@@ -275,13 +281,18 @@
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                    <img src="imagens/Angelo.jpg" alt="Massoterapeuta profissional" class="w-full h-80 md:h-96 object-cover rounded-lg shadow-lg">
+                    <img src="imagens/Angelo.jpg" alt="Massoterapeuta profissional"
+                        class="w-full h-96 md:h-[30rem] object-cover rounded-lg shadow-lg">
                 </div>
+
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre o Terapeuta</h2>
-                    <p class="text-gray-600 mb-4">Meu nome é Angelo, sou massoterapeuta profissional com mais de 10 anos de experiência em diversas técnicas de massagem e terapia corporal.</p>
-                    <p class="text-gray-600 mb-6">Com especializações em Quiropraxia, Massagem Tailandesa e Liberação Miofascial. Minha abordagem combina conhecimento técnico com uma visão holística do bem-estar, proporcionando tratamentos personalizados para cada paciente.</p>
-                    
+                    <p class="text-gray-600 mb-4">Meu nome é Angelo, sou massoterapeuta profissional com mais de 10 anos
+                        de experiência em diversas técnicas de massagem e terapia corporal.</p>
+                    <p class="text-gray-600 mb-6">Com especializações em ventosaterapia, liberação miofascial, massagem
+                        terapêutica, relaxante e pedras quentes. Minha abordagem combina técnica profissional com
+                        cuidado personalizado para cada paciente</p>
+
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div class="flex items-center bg-white p-3 rounded-lg shadow">
                             <div class="bg-green-100 p-2 rounded-full mr-3">
@@ -308,8 +319,9 @@
                             <span class="text-gray-700">Técnicas exclusivas</span>
                         </div>
                     </div>
-                    
-                    <a href="#contato" class="inline-block bg-primary hover:bg-primary text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+
+                    <a href="#contato"
+                        class="inline-block bg-primary hover:bg-primary text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
                         Agende sua sessão
                     </a>
                 </div>
@@ -320,13 +332,16 @@
                 <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Momentos da prática terapêutica</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imagens/massagem-1.jpg" alt="Massagem relaxante sendo realizada" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/massagem-1.jpg" alt="Massagem relaxante sendo realizada"
+                            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imagens/massagem-2.jpg" alt="Técnica de quiropraxia em ação" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/massagem-2.jpg" alt="Técnica de quiropraxia em ação"
+                            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="imagens/massagem-3.jpg" alt="Liberação miofascial aplicada" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
+                        <img src="imagens/massagem-3.jpg" alt="Liberação miofascial aplicada"
+                            class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300">
                     </div>
                 </div>
             </div>
@@ -339,9 +354,10 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Benefícios da Massoterapia</h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Descubra como a massoterapia pode transformar sua qualidade de vida.</p>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Descubra como a massoterapia pode transformar sua
+                    qualidade de vida.</p>
             </div>
-            
+
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Benefício 1 -->
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
@@ -349,7 +365,8 @@
                         <i class="fas fa-heartbeat text-primary text-xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Alívio de Dores</h3>
-                    <p class="text-gray-600">Redução de dores musculares e articulares através de técnicas específicas.</p>
+                    <p class="text-gray-600">Redução de dores musculares e articulares através de técnicas específicas.
+                    </p>
                 </div>
 
                 <!-- Benefício 2 -->
@@ -388,15 +405,17 @@
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">O que dizem nossos clientes</h2>
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Veja a opinião de quem já experimentou nossos serviços.</p>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Veja a opinião de quem já experimentou nossos serviços.
+                </p>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Depoimento 1 -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Silva"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800">Carlos Silva</h4>
@@ -409,17 +428,19 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">"Depois de apenas uma sessão com o Ângelo, minhas dores nas costas diminuíram significativamente. Recomendo muito seu trabalho profissional!"</p>
+                    <p class="text-gray-600">"Depois de apenas uma sessão com o Ângelo, minhas dores nas costas
+                        diminuíram significativamente. Recomendo muito seu trabalho profissional!"</p>
                 </div>
 
                 <!-- Depoimento 2 -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mariana Oliveira" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Ricardo Almeida"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Mariana Oliveira</h4>
+                            <h4 class="font-bold text-gray-800">Ricardo Almeida</h4>
                             <div class="flex text-primary">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -429,14 +450,16 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">"Como atleta, a massagem desportiva com o Ângelo faz parte da minha rotina de treinos. Noto uma recuperação muito mais rápida após as sessões."</p>
+                    <p class="text-gray-600">"Como atleta, a massagem desportiva com o Ângelo faz parte da minha rotina
+                        de treinos. Noto uma recuperação muito mais rápida após as sessões."</p>
                 </div>
 
                 <!-- Depoimento 3 -->
                 <div class="testimonial-card bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto Santos" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto Santos"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-800">Roberto Santos</h4>
@@ -449,7 +472,8 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600">"O Ângelo tem um toque especial. Suas sessões me ajudam a lidar com o estresse do trabalho e a manter minha qualidade de vida."</p>
+                    <p class="text-gray-600">"O Ângelo tem um toque especial. Suas sessões me ajudam a lidar com o
+                        estresse do trabalho e a manter minha qualidade de vida."</p>
                 </div>
             </div>
         </div>
@@ -459,14 +483,15 @@
     <section class="py-16 bg-primary">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-white mb-6">Pronto para transformar seu bem-estar?</h2>
-            <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Agende agora mesmo sua sessão e experimente os benefícios da massoterapia profissional.</p>
+            <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Agende agora mesmo sua sessão e experimente os
+                benefícios da massoterapia profissional.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" 
-                   class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão"
+                    class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <i class="fab fa-whatsapp"></i> Agendar por WhatsApp
                 </a>
-                <a href="tel:+5511999999999" 
-                   class="bg-secondary hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <a href="tel:+554791278965"
+                    class="bg-secondary hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <i class="fas fa-phone"></i> Ligar Agora
                 </a>
             </div>
@@ -474,116 +499,90 @@
     </section>
 
     <!-- Contato -->
-    <section id="contato" class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
-                <div class="w-20 h-1 bg-primary mx-auto"></div>
-                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Estou à disposição para tirar dúvidas e agendar seu horário.</p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row gap-8">
-                <div class="md:w-1/2">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Informações de Contato</h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-start">
-                                <div class="bg-green-100 p-2 rounded-full mr-4">
-                                    <i class="fas fa-phone text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Telefone</h4>
-                                    <a href="tel:+5511999999999" class="text-gray-600 hover:text-primary">(11) 99999-9999</a>
-                                </div>
-                            </div>
+<section id="contato" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+            <div class="w-20 h-1 bg-primary mx-auto"></div>
+            <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Estou à disposição para tirar dúvidas e agendar seu
+                horário.</p>
+        </div>
 
-                            <div class="flex items-start">
-                                <div class="bg-green-100 p-2 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Email</h4>
-                                    <a href="mailto:contato@angelomassoterapeuta.com" class="text-gray-600 hover:text-primary">contato@angelomassoterapeuta.com</a>
-                                </div>
-                            </div>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Informações de Contato -->
+            <div class="md:w-1/2">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Informações de Contato</h3>
 
-                            <div class="flex items-start">
-                                <div class="bg-green-100 p-2 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Endereço</h4>
-                                    <p class="text-gray-600">Rua das Flores, 123 - Sala 45<br>Jardim das Palmeiras - São Paulo/SP</p>
-                                </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-phone text-primary"></i>
                             </div>
-
-                            <div class="flex items-start">
-                                <div class="bg-green-100 p-2 rounded-full mr-4">
-                                    <i class="fas fa-clock text-primary"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Horário de Atendimento</h4>
-                                    <p class="text-gray-600">Segunda a Sexta: 9h às 19h<br>Sábado: 9h às 14h</p>
-                                </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Telefone</h4>
+                                <a href="tel:+5511999999999" class="text-gray-600 hover:text-primary">(47) 9127-8965</a>
                             </div>
                         </div>
-                        
-                        <div class="mt-6 flex space-x-4">
-                            <a href="#" class="text-gray-600 hover:text-primary">
-                                <i class="fab fa-facebook-f text-xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-primary">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-primary">
-                                <i class="fab fa-whatsapp text-xl"></i>
-                            </a>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email</h4>
+                                <a href="mailto:contato@angelomassoterapeuta.com"
+                                    class="text-gray-600 hover:text-primary">contato@angelomassoterapeuta.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Endereço</h4>
+                                <p class="text-gray-600">Rua Avaí - Bom Retiro<br>Joinville - SC</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-clock text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Horário de Atendimento</h4>
+                                <p class="text-gray-600">Terça a Sábado: 8h às 21h</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="md:w-1/2">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Envie uma Mensagem</h3>
-                        <form class="space-y-4">
-                            <div>
-                                <label for="name" class="block text-gray-700 mb-2">Nome</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-gray-700 mb-2">Telefone</label>
-                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-gray-700 mb-2">Mensagem</label>
-                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-primary hover:bg-primary text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
-                                Enviar Mensagem
-                            </button>
-                        </form>
+
+                    <div class="mt-6 flex space-x-4">
+                        <a href="https://www.instagram.com/angelo.massoterapeuta?igsh=MTZreG44Mmp5YTI3aA==" class="text-gray-600 hover:text-primary">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" class="text-gray-600 hover:text-primary">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mapa -->
-            <div class="mt-12 bg-gray-50 p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-bold text-gray-800 mb-4">Localização</h3>
-                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658502206!3d-23.565734367638794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1623866425981!5m2!1spt-BR!2sbr" 
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="md:w-1/2">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Localização</h3>
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3577.92401940118!2d-48.84437622364601!3d-26.264129266419097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deafcb65831725%3A0x8635b23499180b09!2sR.%20Ava%C3%AD%20-%20Bom%20Retiro%2C%20Joinville%20-%20SC%2C%2089222-480!5e0!3m2!1spt-BR!2sbr!4v1754433307776!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Rodapé -->
-    <footer class="bg-secondary text-white py-8">
+    <footer class="bg-primary text-white py-8">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
@@ -597,13 +596,10 @@
                 </div>
 
                 <div class="flex space-x-6">
-                    <a href="#" class="text-gray-300 hover:text-primary transition">
-                        <i class="fab fa-facebook-f text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-300 hover:text-primary transition">
+                    <a href="https://www.instagram.com/angelo.massoterapeuta?igsh=MTZreG44Mmp5YTI3aA==" class="text-gray-300 hover:text-primary transition">
                         <i class="fab fa-instagram text-xl"></i>
                     </a>
-                    <a href="#" class="text-gray-300 hover:text-primary transition">
+                    <a href="https://wa.me/554791278965?text=Olá,%20gostaria%20de%20agendar%20uma%20sessão" class="text-gray-300 hover:text-primary transition">
                         <i class="fab fa-whatsapp text-xl"></i>
                     </a>
                 </div>
@@ -611,13 +607,12 @@
 
             <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300 text-sm">
                 <p>© 2025 Ângelo Amancio. Todos os direitos reservados.</p>
-                <p class="mt-2">Desenvolvido com <i class="fas fa-heart text-primary"></i> para seu bem-estar</p>
-            </div>
         </div>
     </footer>
 
     <!-- Botão de voltar ao topo -->
-    <a href="#home" id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary transition duration-300 hidden">
+    <a href="#home" id="back-to-top"
+        class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary transition duration-300 hidden">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -625,11 +620,11 @@
         // Menu mobile
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Fechar menu ao clicar em um link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
@@ -637,24 +632,24 @@
                 mobileMenu.classList.add('hidden');
             });
         });
-        
+
         // Mostrar/ocultar mais serviços
         const showMoreButton = document.getElementById('show-more-services');
         const moreServices = document.getElementById('more-services');
-        
+
         showMoreButton.addEventListener('click', () => {
             moreServices.classList.toggle('hidden');
-            
+
             if (moreServices.classList.contains('hidden')) {
                 showMoreButton.innerHTML = 'Ver todos os serviços <i class="fas fa-chevron-down ml-1"></i>';
             } else {
                 showMoreButton.innerHTML = 'Mostrar menos <i class="fas fa-chevron-up ml-1"></i>';
             }
         });
-        
+
         // Botão de voltar ao topo
         const backToTopButton = document.getElementById('back-to-top');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.remove('hidden');
@@ -662,20 +657,20 @@
                 backToTopButton.classList.add('hidden');
             }
         });
-        
+
         // Navegação suave
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     const headerHeight = document.querySelector('header').offsetHeight;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                    
+
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
@@ -685,4 +680,5 @@
         });
     </script>
 </body>
+
 </html>
